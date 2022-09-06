@@ -75,6 +75,11 @@ public class TemperatureConverter {
                 System.out.println("\tInforme a quantidade de temperaturas          ");
                 System.out.println("\t\tque serao convertidas:          ");
                 unit = sc.nextInt();
+                if(unit < 0) {
+                    System.err.println("Valor invalido!\n");
+                    System.out.println("...........................................................");
+                    return getTemperatures();
+                }
                 System.out.println("...........................................................");
             }catch (InputMismatchException e) {
                 sc.nextLine();
